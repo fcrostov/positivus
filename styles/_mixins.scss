@@ -14,7 +14,7 @@
 @mixin reset-button {
   padding: 0;
   background-color: transparent;
-  borer: none;
+  border: none;
 }
 
 @mixin flex-center($isInLine: false) {
@@ -38,4 +38,18 @@
 @mixin square ($size) {
   width: $size;
   aspect-ratio: 1;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
 }
