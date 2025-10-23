@@ -1,8 +1,11 @@
+@import 'normalize',
+'variables',
+'mixins',
+'fonts',
+'media',
+'utils',
+'globals';
+
 @import
-  'normalize',
-  'variables',
-  'mixins',
-  'fonts',
-  'media',
-  'utils',
-  'globals';
+'blocks/button',
+'blocks/header';
