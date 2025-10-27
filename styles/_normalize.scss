@@ -208,3 +208,7 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+
+p {
+  @include fluid-text(48, 16);
+}
