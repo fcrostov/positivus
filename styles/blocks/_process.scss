@@ -1,0 +1,50 @@
+.process {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    counter-reset: custom-counter;
+    list-style: none;
+  }
+
+  &__item {
+    counter-increment: custom-counter;
+  }
+
+  &__accordion {
+    padding: 40px 60px;
+    background-color: var(--color-grey);
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+    transition-duration: var(--transition-duration);
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 50px;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      column-gap: 25px;
+
+      &::before {
+        content: counter(custom-counter, decimal-leading-zero);
+        font-size: 2em;
+      }
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+
+    &[open] {
+      background-color: var(--color-accent);
+    }
+  }
+}
