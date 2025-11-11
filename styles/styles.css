@@ -326,6 +326,11 @@ h4, .h4 {
   align-items: start;
   row-gap: 5px;
 }
+@media (max-width: 767px) {
+  .field {
+    row-gap: 10px;
+  }
+}
 .field__label {
   font-size: clamp(14px, 1.1111111111vw, 16px);
 }
@@ -346,6 +351,11 @@ h4, .h4 {
     background-color: var(--color-accent);
   }
 }
+@media (max-width: 767px) {
+  .field__input {
+    padding-inline: 20px;
+  }
+}
 .field__input:focus {
   border-color: var(--color-accent);
   outline: none;
@@ -359,6 +369,11 @@ h4, .h4 {
   max-height: 350px;
   padding-block: 18px;
   resize: vertical;
+}
+@media (max-width: 767px) {
+  .field__input--textarea {
+    height: 132px;
+  }
 }
 
 .radio {
@@ -1437,10 +1452,14 @@ h4, .h4 {
 
 .contact-us {
   position: relative;
-  padding: 60px 100px 80px;
-  background-color: var(--color-grey);
-  border-radius: var(--border-radius-large);
   overflow-x: hidden;
+}
+@media (min-width: 768px) {
+  .contact-us {
+    padding: 60px 100px 80px;
+    background-color: var(--color-grey);
+    border-radius: var(--border-radius-large);
+  }
 }
 .contact-us::after {
   --contactUsImageOffsetY: 62px;
@@ -1453,16 +1472,46 @@ h4, .h4 {
   aspect-ratio: 1;
   background: url("../../images/contact-us_bg.svg") center/contain no-repeat;
 }
+@media (max-width: 1023px) {
+  .contact-us::after {
+    display: none;
+  }
+}
 .contact-us__form, .contact-us__body {
   display: flex;
   flex-direction: column;
 }
-.contact-us__form {
-  row-gap: 40px;
-  max-width: 556px;
+@media (max-width: 767px) {
+  .contact-us__request-types, .contact-us__body {
+    background-color: var(--color-grey);
+  }
+}
+@media (max-width: 767px) {
+  .contact-us__request-types {
+    padding: 40px 52px 36px;
+    border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+  }
 }
 .contact-us__body {
   row-gap: 25px;
+}
+@media (max-width: 767px) {
+  .contact-us__body {
+    row-gap: 20px;
+    padding: 10px 30px 50px;
+    border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .contact-us__form {
+    max-width: 556px;
+  }
+}
+@media (min-width: 768px) {
+  .contact-us__form {
+    row-gap: 40px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
