@@ -3,5 +3,13 @@
   column-gap: 20px;
   padding: 58px 40px;
   background-color: var(--color-dark-alt);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--border-radius);
+
+  @include desktop {
+    flex-direction: column;
+    row-gap: 22px;
+    width: 100%;
+    padding: 30px;
+    max-width: 450px;
+  }
 }
